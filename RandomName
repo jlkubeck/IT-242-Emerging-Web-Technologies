@@ -1,0 +1,28 @@
+<html>
+
+<head>
+
+<script type="text/javascript">
+//Not Finished
+
+function randomNumber(maxValue){
+return Math.floor(Math.random() * maxValue);
+
+function getName(){
+var fName = ["Moon", "James", "Rail", "Arya"];
+var lName = ["Ice", "Faye", "Pane", "Laudie"];
+var newName = 
+
+
+}
+
+
+
+</script>
+
+</head>
+
+<body>
+ <button onclick="getName()">Generate my Name</button>
+</body>
+</html>
