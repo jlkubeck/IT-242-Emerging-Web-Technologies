@@ -3,26 +3,32 @@
 <head>
 
 <script type="text/javascript">
-//Not Finished
 
-function randomNumber(maxValue){
-return Math.floor(Math.random() * maxValue);
-
+var fnames = ['Artemis', 'Atreyu', 'Bastion', 'Emmet', 'Angel', 'Gaius', 'Gandalf', 'Idris', 'Jareth', 'Kael', 
+'Kaeli', 'Milo', 'Rory', 'Aeryn', 'Amelia', 'Arya', 'Aurra', 'Clara', 'Diana', 'Echo', 'Elora', 'Katniss', 'Kathryn', 
+'River', 'Sonya', ];
+var lnames = ['Annekin', 'Fleur', 'Eowyn', 'Arell', 'Venus', 'Kamala', 'Nyota', 'Arthurs', 'Padme', 'Ripley', 'Cooper',
+ 'Willow', 'Tauriel', 'Teyla', 'Valerian', 'Uhtred', 'Hezra', 'Lydan', 'Gethrod', 'Jaether', 'Adon', 'Tekren', 
+ 'Paskel', 'Lilyrose'];
 function getName(){
-var fName = ["Moon", "James", "Rail", "Arya"];
-var lName = ["Ice", "Faye", "Pane", "Laudie"];
-var newName = 
-
+var randomNumber = Math.floor(Math.random() * (fnames.length));
+var randomNumber2 = Math.floor(Math.random() * (lnames.length));
+document.querySelector('#nameDisplay').innerHTML = fnames[randomNumber] + ' ' + lnames[randomNumber2];
 
 }
 
 
-
 </script>
-
+<title>Random Name Generator</title>
 </head>
 
-<body>
+<body bgcolor="#ADD8E6">
+<h1>Generate your Name!</h1>
+<div id="nameDisplay">
+</div>
+
+
  <button onclick="getName()">Generate my Name</button>
+ 
 </body>
 </html>
