@@ -1,0 +1,62 @@
+<html>
+<head>
+<title>The Library</title>
+
+</head>
+<script type="text/javascript">
+class Item{
+    //add two properties
+    //title and type
+    //not done
+}
+
+class Library{
+
+    constructor(){
+        this.items = [];
+}
+    add(){
+        var frmItem = document.querySelector('#libraryForm');
+        var item = this.buildItem(frmItem);
+        this.items.push(item);
+        console.log(this.items);
+        console.table(this.items);
+        return false;
+        }
+        buildItem(frm){
+            return new Item(title,itemType);
+            var itemTypes = frm.querySelector('#selItemType').selectedOptions;
+            return{
+                'itemType':itemTypes[0].value, 
+                'title':frm.title.value};
+        }
+        render(elementId){
+            //loop over items and display on webpage
+        }
+        renderItem(item){
+        }
+}
+var billsLibrary = new Library();
+
+</script>
+<body>
+<h1>Our Library</h1>
+<form id="libraryForm">
+    <label for="selItemType">Item Type</label>
+    <select name="itemType" id="selItemType">
+        <option value="book">Book</option>
+        <option value="movie">Movie</option>
+        <option value="game">Game</option>
+
+    </select>
+    <label for="txtTitle">Title</label>
+    <input type="text" name="title" id="txtTitle">
+
+    <input type="submit" name="btnAdd" value="Add"
+    onClick="return billsLibrary.add()">
+</form>
+    <ul id="libraryItems">
+
+    </ul>
+</body>
+</html>
