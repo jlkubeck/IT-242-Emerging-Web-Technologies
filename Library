@@ -8,7 +8,22 @@ class Item{
     //add two properties
     //title and type
     //not done
-}
+   display(){
+   var libTitle =
+   var libType =
+   }
+   //example
+   function Monkey(type, name) {
+    var classname = 'monkey';
+    this.type = type;
+    this.name = name;
+    this.run = function () {
+        console.log(this.name + ' runs and runs!');
+    }
+    this.info = function () {
+        console.log(this.name + ' is a ' + this.type + ' ' + classname);
+    } 
+    //end of example
 
 class Library{
 
