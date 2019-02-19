@@ -35,16 +35,9 @@ class Library{
         }
         render(elementId){
             //loop over items and display on webpage
-            items.loop
-                var li = create('li');
-                li.innerText = item.itemType +' '+ item.title;
-                ul.appendChild(li);
             
             var ul = document.querySelector('#libraryItems');
-            var vars = this.buildItem(ul);
-            this.items.push(vars);
-
-            this.items.forEach(function(item){
+            this.items.forEach(function(itemType){
             var ul = document.createElement('li');
                    
                     var strItem = document.createElement('li');
@@ -53,7 +46,12 @@ class Library{
                     a.innerText = `${sa.title}`;                    
                     ul.appendChild(li);
                 });
+                items.loop
+                var li = create('li');
+                li.innerText = this.item.itemType +' '+ this.item.title;
+                ul.appendChild(li);
             }
+            
  
  
         renderItem(item){
@@ -78,10 +76,10 @@ var billsLibrary = new Library();
     <input type="submit" name="btnAdd" value="Add"
     onClick="return billsLibrary.add()">
 </form>
-    <div id="libraryItems">
-    <ul>
+    <ul id="libraryItems">
+   
 
     </ul>
-    </div>
+    
 </body>
 </html>
