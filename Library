@@ -4,18 +4,15 @@
 
 </head>
 <script type="text/javascript">
-class Item{
+class LibraryItem{
     //add two properties
     //title and type
-    //not done
-   constructor(libTitle,libType){
-   this.libTitle = libTitle;
-   this.libType = libType;
-   }
-   showSubs(){
-   return this.????????????????????????????
-   }
-   }
+    constructor(){
+        this.itemType = [];
+        this.title = [];
+    }
+    
+}
 
 class Library{
 
@@ -31,7 +28,6 @@ class Library{
         return false;
         }
         buildItem(frm){
-            return new Item(title,itemType);
             var itemTypes = frm.querySelector('#selItemType').selectedOptions;
             return{
                 'itemType':itemTypes[0].value, 
@@ -39,6 +35,7 @@ class Library{
         }
         render(elementId){
             //loop over items and display on webpage
+            var showMedia = frm.document.querySelector('#showMedia').innerHTML = this.itemType + ' ' + this.title;
         }
         renderItem(item){
         }
@@ -65,5 +62,8 @@ var billsLibrary = new Library();
     <ul id="libraryItems">
 
     </ul>
+    <div id="showMedia">
+
+    </div>
 </body>
 </html>
