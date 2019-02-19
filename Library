@@ -35,7 +35,27 @@ class Library{
         }
         render(elementId){
             //loop over items and display on webpage
-            var showMedia = frm.document.querySelector('#showMedia').innerHTML = this.itemType + ' ' + this.title;
+            var showMedia = frm.document.querySelector('#libraryItems').innerHTML = this.itemType + ' ' + this.title;
+            var i = 1;
+            var ul = document.querySelector('#libraryItems ul');
+
+            this.items.forEach(function(sa){
+            var ul = document.createElement('li');
+                    if(i % 2 === 0){
+                        ul.items.add('evenRow');
+                    }
+                    var s = document.createElement('li');
+                    var a = document.createElement('li');
+                    s.innerText = `${sa.itemType}`;
+                    li.appendChild(s);
+                    a.innerText = `${sa.title}`;                    
+                    li.appendChild(a);
+                    ul.appendChild(li);
+                    i++;
+                });
+ 
+ 
+ 
         }
         renderItem(item){
         }
@@ -62,8 +82,6 @@ var billsLibrary = new Library();
     <ul id="libraryItems">
 
     </ul>
-    <div id="showMedia">
-
-    </div>
+    
 </body>
 </html>
