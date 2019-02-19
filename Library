@@ -35,38 +35,27 @@ class Library{
         }
         render(elementId){
             //loop over items and display on webpage
-            var showMedia = frm.document.querySelector('#libraryItems').innerHTML = this.itemType + ' ' + this.title;
-            var i = 1;
-            var ul = document.querySelector('#libraryItems ul');
+            items.loop
+                var li = create('li');
+                li.innerText = item.itemType +' '+ item.title;
+                ul.appendChild(li);
+            
+            var ul = document.querySelector('#libraryItems');
             var vars = this.buildItem(ul);
             this.items.push(vars);
-            
-  var theTitle = document.getElementById("txtTitle").value;
-  if (theTitle === "" || txtTitle.length === 0)
-  {
-     return false; //stop the function since the value is empty.
-  }
-  names.push(theTitle);
-  document.getElementById("libraryItems").children[0].innerHTML += "<li>"+items[items.length-1]+"</li>";
 
-            this.items.forEach(function(sa){
+            this.items.forEach(function(item){
             var ul = document.createElement('li');
-                    if(i % 2 === 0){
-                        ul.items.add('evenRow');
-                    }
-                    var s = document.createElement('li');
-                    var a = document.createElement('li');
-                    s.innerText = `${sa.itemType}`;
-                    li.appendChild(s);
+                   
+                    var strItem = document.createElement('li');
+                    strItem.innerText = `${sa.itemType} ${sa.title}`;
+                    li.appendChild(strItem);
                     a.innerText = `${sa.title}`;                    
-                    li.appendChild(a);
                     ul.appendChild(li);
-                    i++;
                 });
+            }
  
  
- 
-        }
         renderItem(item){
         }
 }
