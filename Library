@@ -38,6 +38,16 @@ class Library{
             var showMedia = frm.document.querySelector('#libraryItems').innerHTML = this.itemType + ' ' + this.title;
             var i = 1;
             var ul = document.querySelector('#libraryItems ul');
+            var vars = this.buildItem(ul);
+            this.items.push(vars);
+            
+  var theTitle = document.getElementById("txtTitle").value;
+  if (theTitle === "" || txtTitle.length === 0)
+  {
+     return false; //stop the function since the value is empty.
+  }
+  names.push(theTitle);
+  document.getElementById("libraryItems").children[0].innerHTML += "<li>"+items[items.length-1]+"</li>";
 
             this.items.forEach(function(sa){
             var ul = document.createElement('li');
@@ -79,9 +89,10 @@ var billsLibrary = new Library();
     <input type="submit" name="btnAdd" value="Add"
     onClick="return billsLibrary.add()">
 </form>
-    <ul id="libraryItems">
+    <div id="libraryItems">
+    <ul>
 
     </ul>
-    
+    </div>
 </body>
 </html>
