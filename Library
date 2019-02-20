@@ -1,85 +1,133 @@
 <html>
+
 <head>
+
 <title>The Library</title>
 
+
 </head>
+
 <script type="text/javascript">
+
 class LibraryItem{
+
     //add two properties
+
     //title and type
-    constructor(){
-        this.itemType = [];
-        this.title = [];
-    }
-    
+
+    constructor(itemType,title){
+
+        this.itemType = itemType;
+
+        this.title = title;
+
+    }  
+
 }
+
 
 class Library{
 
     constructor(){
+
         this.items = [];
+
 }
+
     add(){
+
         var frmItem = document.querySelector('#libraryForm');
+
         var item = this.buildItem(frmItem);
+
         this.items.push(item);
+
         console.log(this.items);
+
         console.table(this.items);
+        this.render();
+
         return false;
+
         }
+
         buildItem(frm){
+
             var itemTypes = frm.querySelector('#selItemType').selectedOptions;
-            return{
-                'itemType':itemTypes[0].value, 
-                'title':frm.title.value};
+            return new LibraryItem(itemTypes[0].value,frm.title.value)
+
+           
         }
-        render(elementId){
+
+        render(){
+
             //loop over items and display on webpage
-            
+
             var ul = document.querySelector('#libraryItems');
+
             this.items.forEach(function(sa){
-            var ul = document.createElement('li');
-                   
-                    var strItem = document.createElement('li');
-                    strItem.innerText = `${sa.itemType} ${sa.title}`;
-                    li.appendChild(strItem);
-                    a.innerText = `${sa.title}`;                    
+
+                var li = document.createElement('li');
+                    li.innerText = `${sa.itemType} ${sa.title}`;
                     ul.appendChild(li);
-                });
-                items.loop
-                var li = create('li');
-                li.innerText = this.item.itemType +' '+ this.item.title;
-                ul.appendChild(li);
-            }
-            
- 
- 
-        renderItem(item){
+            });
+
+
         }
+
+        renderItem(item){
+
+        }
+
 }
+
 var billsLibrary = new Library();
 
+
 </script>
+
 <body>
+
 <h1>Our Library</h1>
+
 <form id="libraryForm">
+
     <label for="selItemType">Item Type</label>
+
     <select name="itemType" id="selItemType">
+
         <option value="book">Book</option>
+
         <option value="movie">Movie</option>
+
         <option value="game">Game</option>
 
+
+
     </select>
+
     <label for="txtTitle">Title</label>
+
     <input type="text" name="title" id="txtTitle">
 
+
+
     <input type="submit" name="btnAdd" value="Add"
+
     onClick="return billsLibrary.add()">
+
 </form>
+
     <ul id="libraryItems">
+
    
 
+
+
     </ul>
+
     
+
 </body>
+
 </html>
