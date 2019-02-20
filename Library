@@ -64,7 +64,7 @@ class Library{
             //loop over items and display on webpage
 
             var ul = document.querySelector('#libraryItems');
-
+            ul.innerHTML = null;
             this.items.forEach(function(sa){
 
                 var li = document.createElement('li');
