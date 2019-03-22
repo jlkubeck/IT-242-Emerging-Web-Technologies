@@ -1,0 +1,29 @@
+Farkle
+
+Player			  Name
+				      Number of Players
+				      Player turn rotation
+
+Game			    Name
+			    	  Players
+			    	  Dice
+				      Score manager
+				      Rules
+				      QuitGame()
+				      StartGame()
+				      DiceRoll()
+				      GameWin()
+			      	GameLose()
+
+Score manager	Score Sheet
+			      	Players
+				      CalculateRoll()
+
+Rules		      Variations
+				      Common
+						
+Dice		      Number on dice
+				      Sides	
+				      Roll
+				      HotDice()
+				      SetAside()
