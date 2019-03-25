@@ -5,15 +5,15 @@ Player			  Name
 				      Player turn rotation
 
 Game			    Name
-			    	  Players
-			    	  Dice
+			    	      Players
+			    	      Dice
 				      Score manager
 				      Rules
 				      QuitGame()
 				      StartGame()
 				      DiceRoll()
 				      GameWin()
-			      	GameLose()
+				      GameLose()
 
 Score manager	Score Sheet
 			      	Players
