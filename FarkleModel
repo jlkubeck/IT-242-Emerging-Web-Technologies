@@ -15,8 +15,8 @@ Game			    	      Name
 				      GameWin()
 				      GameLose()
 
-Score manager	Score Sheet
-			      	Players
+Score manager			      Score Sheet
+			      	      Players
 				      CalculateRoll()
 
 Rules		     		      Variations
