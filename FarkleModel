@@ -1,10 +1,10 @@
 Farkle
 
-Player			  Name
+Player				      Name
 				      Number of Players
 				      Player turn rotation
 
-Game			    Name
+Game			    	      Name
 			    	      Players
 			    	      Dice
 				      Score manager
@@ -19,10 +19,10 @@ Score manager	Score Sheet
 			      	Players
 				      CalculateRoll()
 
-Rules		      Variations
+Rules		     		      Variations
 				      Common
 						
-Dice		      Number on dice
+Dice		    		      Number on dice
 				      Sides	
 				      Roll
 				      HotDice()
