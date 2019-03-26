@@ -18,8 +18,8 @@ class Player{
 
         this.heldDice = [];
        
-       
-         this.players = name.length;
+        this.Player = newPlayer(playerName);
+        f.addPlayer(playerName);
           
         //This is to try and keep track of the players. Not sure how to 
         //get it to show up.
