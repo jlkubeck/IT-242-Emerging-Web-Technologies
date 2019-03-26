@@ -11,10 +11,12 @@
             document.querySelector('#playerForm').onsubmit = addPlayer;
         }
         function addPlayer(){
+            
             // gets the player name from the form
             var playerForm = document.querySelector('#txtPlayer');
             var playerName = playerForm.value;
             // adds the player to farkle
+            var thisPlayer = playerName;
             f.addPlayer(playerName);
             console.table(f.players);
             // clears the form
@@ -46,4 +48,11 @@
             </div>
         </div>
     </div>
+
+
+
+    
+</body>
+
+</html>
 
