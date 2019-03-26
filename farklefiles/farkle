@@ -5,7 +5,7 @@ class Farkle {
         this.dice = [];
         this.turn = [];
         this.players = [];
-
+        
         for(var i = 1; i<=this._dieCount; i++){
             this.dice[i-1] = new Die(this._dieSides);
         }
@@ -13,9 +13,10 @@ class Farkle {
   
     addPlayer(playerName){
             this.players.push(playerName);
+           
     } 
 
-    drawGame(Player){
+    drawGame(){
         document.querySelector('#board').innerHTML='';
         
         this.players.forEach((player)=>{
@@ -29,7 +30,7 @@ class Farkle {
 
     drawPlayer(player){
         var p = document.createElement('div');
-        p.innerText = player;
+        p.innerHTML = Player.name;
         document.querySelector('#board').appendChild(p);
     }
     
