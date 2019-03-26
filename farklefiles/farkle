@@ -15,7 +15,7 @@ class Farkle {
             this.players.push(playerName);
     } 
 
-    drawGame(){
+    drawGame(Player){
         document.querySelector('#board').innerHTML='';
         
         this.players.forEach((player)=>{
