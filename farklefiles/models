@@ -1,4 +1,5 @@
 
+
 class Die{
     constructor(sides){
         this._sides = sides;
@@ -18,16 +19,8 @@ class Player{
 
         this.heldDice = [];
        
-        this.Player = newPlayer(playerName);
-        f.addPlayer(playerName);
-          
-        //This is to try and keep track of the players. Not sure how to 
-        //get it to show up.
-        this.addPlayer = document.getElementByID("players").value;
-         for (var p = 0; p < players; p++){
-            turn.push(0);
         }
-    }
+    
 
     rollDice(dice){
 
